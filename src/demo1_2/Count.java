@@ -9,7 +9,7 @@ public class Count {
 
         if (a == 0) {
             x1 = 0;
-            result = "Root 1 is: " + x1;
+            result = "Root is: " + x1;
         } else if (a + b == 0) {
             x1 = 0;
             x2 = -b / a;
