@@ -10,7 +10,7 @@ public class Sqrt {
         double c = input.getNumber();
 
         Count count = new Count();
-        count.counting(a, b, c);
+        count.countingBothCases(a, b, c);
 
     }
 
