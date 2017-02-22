@@ -17,9 +17,4 @@ public class Input {
         System.out.println("If you want to count more type \"yes\" or \"no\".");
         return in.next();
     }
-//    public double getNumberForSqr(){
-//        Scanner in = new Scanner(System.in);
-//        System.out.println("Input number for square root: ");
-//        return in.nextDouble();
-//    }
 }

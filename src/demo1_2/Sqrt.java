@@ -4,6 +4,7 @@ public class Sqrt {
     static String chose;
     static Input input = new Input();
     static boolean repeat = true;
+
     public static void demo1() {
 
 
@@ -24,18 +25,14 @@ public class Sqrt {
         boolean checked = true;
         if (chose.equalsIgnoreCase("yes")) {
             checked = true;
-            } else if (chose.equalsIgnoreCase("no")) {
+        } else if (chose.equalsIgnoreCase("no")) {
             checked = false;
-            } else {
+        } else {
             System.out.println("Wrong value!");
             check();
         }
         return checked;
     }
 }
-//        CountSqrt countSqrt = new CountSqrt();
-//        countSqrt.sqrtCounting(input.getNumberForSqr());
-//            String s = ("sdf");
-//            Prnt.printText("typed");
 
 
