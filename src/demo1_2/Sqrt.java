@@ -1,12 +1,13 @@
 package demo1_2;
 
 public class Sqrt {
-
+    static String chose;
+    static Input input = new Input();
+    static boolean repeat = true;
     public static void demo1() {
-        boolean repeat = true;
-        String chose;
+
+
         while (repeat) {
-            Input input = new Input();
             double a = input.getNumber();
             double b = input.getNumber();
             double c = input.getNumber();
@@ -14,19 +15,27 @@ public class Sqrt {
             Count count = new Count();
             count.countingBothCases(a, b, c);
 
-            chose = input.getString();
-            if (chose.isEmpty()) {
-                System.out.println("Please type \"yes\" or \"no\".");
-            } else if (chose.equalsIgnoreCase("no")) {
-                repeat = false;
-            }
+            repeat = check();
         }
-
     }
 
+    private static boolean check() {
+        chose = input.getString();
+        boolean checked = true;
+        if (chose.equalsIgnoreCase("yes")) {
+            checked = true;
+            } else if (chose.equalsIgnoreCase("no")) {
+            checked = false;
+            } else {
+            System.out.println("Wrong value!");
+            check();
+        }
+        return checked;
+    }
+}
 //        CountSqrt countSqrt = new CountSqrt();
 //        countSqrt.sqrtCounting(input.getNumberForSqr());
 //            String s = ("sdf");
 //            Prnt.printText("typed");
 
-}
+

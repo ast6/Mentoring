@@ -14,10 +14,9 @@ public class Input {
     }
 
     public String getString() {
-        System.out.println("Would you want to count more? Type \"yes\" or \"no\".");
+        System.out.println("If you want to count more type \"yes\" or \"no\".");
         return in.next();
     }
-
 //    public double getNumberForSqr(){
 //        Scanner in = new Scanner(System.in);
 //        System.out.println("Input number for square root: ");
