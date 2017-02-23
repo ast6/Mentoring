@@ -1,3 +1,5 @@
+package demo1_2;
+
 public class Sqrt {
     static String chose;
     static Input input = new Input();

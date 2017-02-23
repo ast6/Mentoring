@@ -1,3 +1,5 @@
+package demo1_2;
+
 import java.util.Scanner;
 
 public class Input {
@@ -6,7 +8,7 @@ public class Input {
 
     public double getNumber() {
 
-        System.out.println("Input number: ");
+        System.out.println("demo1_2.Input number: ");
         return in.nextDouble();
 
     }

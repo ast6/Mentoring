@@ -1,3 +1,5 @@
+package demo1_2;
+
 public class Count {
 
     double x1;
