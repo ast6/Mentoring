@@ -14,7 +14,7 @@ public class Sqrt {
             double c = input.getNumber();
 
             Count count = new Count();
-            count.countingBothCases(a, b, c);
+            count.countingRoots(a, b, c);
 
             repeat = check();
         }
