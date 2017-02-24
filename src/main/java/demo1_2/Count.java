@@ -24,7 +24,7 @@ public class Count {
 
     }
 
-    public void countingBothCases(double a, double b, double c) {
+    public String countingRoots(double a, double b, double c) {
 
         if (a == 0) {
             x1 = -(c / b);
@@ -46,6 +46,7 @@ public class Count {
             result = fullQE(a, b, c);
         }
         System.out.println(result);
+        return result;
     }
 
 }

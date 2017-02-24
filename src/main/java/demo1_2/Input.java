@@ -8,7 +8,7 @@ public class Input {
 
     public double getNumber() {
 
-        System.out.println("demo1_2.Input number: ");
+        System.out.println("Input number: ");
         return in.nextDouble();
 
     }
