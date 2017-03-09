@@ -17,4 +17,16 @@ public class Input {
         System.out.println("If you want to count more type \"yes\" or \"no\".");
         return in.next();
     }
+
+    public String getArray(){
+        System.out.println("Input array: ");
+        return in.next();
+
+    }
+    public int getNumberForBinSearch() {
+
+        System.out.println("Input number: ");
+        return in.nextInt();
+
+    }
 }
