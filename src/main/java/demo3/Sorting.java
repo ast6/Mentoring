@@ -1,13 +1,8 @@
 package demo3;
 
-import demo1_2.Input;
-
 public class Sorting {
 
     public int[] bubbleSort(int[] arr) {
-//
-//        Input input = new Input();
-//        input.getArray();
 
         int size = arr.length;
 

@@ -7,9 +7,8 @@ public class BinSearch {
         Sorting sorting = new Sorting();
         int[] sortedArr = sorting.bubbleSort(arr);
 
-        int size = sortedArr.length;
         int low = 0;
-        int high = size - 1;
+        int high = sortedArr.length - 1;
         int index = -1;
         int mid = 0;
 

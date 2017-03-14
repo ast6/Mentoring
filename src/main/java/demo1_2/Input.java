@@ -18,8 +18,13 @@ public class Input {
         return in.next();
     }
 
-    public String getNumberForWord(){
+    public String getNumberForWord() {
         System.out.println("Input number for converting to word:");
+        return in.next();
+    }
+
+    public String getNumberForOddOrEven(){
+        System.out.println("Input number for counting odd or even number:");
         return in.next();
     }
 }
