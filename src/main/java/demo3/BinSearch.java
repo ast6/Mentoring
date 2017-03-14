@@ -11,11 +11,9 @@ public class BinSearch {
         int low = 0;
         int high = size - 1;
         int index = -1;
-        int mid =0;
+        int mid = 0;
 
-        if (searchNumber < sortedArr[0] || searchNumber > sortedArr[sortedArr.length - 1]) {
-            System.out.println(String.format("Array does not include \"%s\"element", searchNumber));
-        } else {
+        if (searchNumber >= sortedArr[0] && searchNumber <= sortedArr[sortedArr.length - 1]) {
             while (low <= high) {
                 mid = (low + high) / 2;
                 if (sortedArr[mid] == searchNumber) {
@@ -23,13 +21,16 @@ public class BinSearch {
                     break;
                 }
                 if (sortedArr[mid] <= searchNumber) {
-                    low = mid;
+                    low = mid + 1;
                 } else {
-                    high = mid;
+                    high = mid - 1;
                 }
             }
-            if (arr [mid] != searchNumber ){
+            if (arr[mid] != searchNumber) {
                 index = -2;
+            }
+            if (low > high) {
+                return index;
             }
         }
         return index;

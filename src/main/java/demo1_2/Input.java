@@ -18,15 +18,8 @@ public class Input {
         return in.next();
     }
 
-    public String getArray(){
-        System.out.println("Input array: ");
+    public String getNumberForWord(){
+        System.out.println("Input number for converting to word:");
         return in.next();
-
-    }
-    public int getNumberForBinSearch() {
-
-        System.out.println("Input number: ");
-        return in.nextInt();
-
     }
 }
