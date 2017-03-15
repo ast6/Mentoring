@@ -10,5 +10,4 @@ public class SumAndAverage {
         }
         return sum;
     }
-
 }
