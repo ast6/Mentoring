@@ -1,5 +1,6 @@
 import demo1_2.Sqrt;
 import demo3.*;
+import demo4.OperationsOfCalculation;
 
 
 public class Runner {
@@ -11,6 +12,8 @@ public class Runner {
         OddOrEvenNumber oddOrEvenNumber = new OddOrEvenNumber();
         ComputePi computePi = new ComputePi();
         HarmonicSum harmonicSum = new HarmonicSum();
+        OperationsOfCalculation operationsOfCalculation = new OperationsOfCalculation();
+
 
         //Demo1
         Sqrt.demo1();
@@ -23,7 +26,12 @@ public class Runner {
         harmonicSum.countingOfHarmonicSum(50000);
         computePi.countPiComp();
         computePi.countPiManual(3000000);
-
+        //Calculation
+        operationsOfCalculation.add(2,2);
+        operationsOfCalculation.division(3,5);
+        operationsOfCalculation.multiplication(1,5);
+        operationsOfCalculation.subtraction(3,2);
+        //Person
 
     }
 }

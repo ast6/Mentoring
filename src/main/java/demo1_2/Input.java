@@ -27,4 +27,4 @@ public String getNumberForOddOrEven(){
         System.out.println("Input number for counting odd or even number:");
         return in.next();
         }
-        }
+}
