@@ -2,25 +2,19 @@ package demo4;
 
 public class OperationsOfCalculation {
 
-    double res;
-
     public double add(double a, double b) {
-        res = a + b;
-        return res;
+        return a + b;
     }
 
     public double subtraction(double a, double b) {
-        res = a - b;
-        return res;
+        return a - b;
     }
 
     public double multiplication(double a, double b) {
-        res = a * b;
-        return res;
+        return a * b;
     }
 
     public double division(double a, double b) {
-        res = a / b;
-        return res;
+        return a / b;
     }
 }
