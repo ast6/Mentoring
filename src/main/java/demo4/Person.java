@@ -1,10 +1,22 @@
 package demo4;
 
+import org.junit.Assert;
+
 public class Person {
 
     String name = "name";
     String surname = "surname";
     String email = "email";
+
+    public Person(String name, String surname, String email) {
+        this.name = name;
+        this.surname = surname;
+        this.email = email;
+    }
+
+    public Person() {
+
+    }
 
     public String getName() {
         return name;
@@ -27,6 +39,11 @@ public class Person {
     }
 
     public void setEmail(String email) {
-        this.email = email;
+        if (email.contains("@")) {
+            //valid
+            this.email = email;
+        } else {
+            System.out.println("");//add text
+        }
     }
 }
