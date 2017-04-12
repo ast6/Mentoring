@@ -28,9 +28,6 @@ public class BinSearch {
             if (arr[mid] != searchNumber) {
                 index = -2;
             }
-            if (low > high) {
-                return index;
-            }
         }
         return index;
 

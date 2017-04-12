@@ -5,7 +5,7 @@ import demo1_2.Input;
 public class OddOrEvenNumber {
     Input input = new Input();
 
-    public int counting(){
+    public int oddVerification(){
         int result = new Integer(input.getNumberForOddOrEven());
 
         if (result%2 ==0){
