@@ -24,7 +24,7 @@ public String getNumberForWord() {
         }
 
 public String getNumberForOddOrEven(){
-        System.out.println("Input number for counting odd or even number:");
+        System.out.println("Input number for oddVerification odd or even number:");
         return in.next();
         }
 }
