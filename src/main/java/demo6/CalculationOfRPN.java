@@ -4,10 +4,10 @@ import java.util.LinkedList;
 
 public class CalculationOfRPN {
     ReversePolishNotation reversePolishNotation = new ReversePolishNotation();
+    LinkedList<Integer> ints = new LinkedList<>();
+    LinkedList<Character> opers = new LinkedList<>();
 
     public int val(String value) {
-        LinkedList<Integer> ints = new LinkedList<>();
-        LinkedList<Character> opers = new LinkedList<>();
         for (int i = 0; i < value.length(); i++) {
             char c = value.charAt(i); //for comparison
             if (c == '(') {
@@ -31,8 +31,8 @@ public class CalculationOfRPN {
                 i--;
                 ints.add(Integer.parseInt(operand));
             }
-            while (!opers.isEmpty()){
-                reversePolishNotation.calculation(ints,opers.removeLast());
+            while (!opers.isEmpty()) {
+                reversePolishNotation.calculation(ints, opers.removeLast());
             }
         }
         return ints.get(0);
