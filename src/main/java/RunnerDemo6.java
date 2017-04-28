@@ -6,7 +6,7 @@ public class RunnerDemo6 {
         //Initializing
 //        CalculationOfRPN calculationOfRPN = new CalculationOfRPN();
         ERL erl = new ERL();
-        System.out.println(erl.coder("Heeellooooo"));
+        System.out.println(erl.coder("Heeeeeeeeeeeeeeellooooo"));
         System.out.println(erl.decoder("H9e3e2l5o"));
 //        System.out.println(erl.coderRLE("weeeeeeeeeeeeerkooooo"));
 //        System.out.println(erl.decoder("4e5y"));

@@ -9,25 +9,29 @@ public class ERL {
             while (i + 1 < source.length() && source.charAt(i) == source.charAt(i + 1)) {
                 runLength++;
                 i++;
+                if (runLength == 9) {
+                    break;
+                }
+            }
+            if (runLength != 1) {
+                dest.append(runLength);
             }
             dest.append(source.charAt(i));
-            dest.append(runLength);
-
         }
         return dest.toString();
     }
 
     public String decoder(String text) {
-        String res = new String();
+        String res = "";
         char[] charArray = text.toCharArray();
-        for (int i = 0;i<charArray.length-1;i++) {
+        for (int i = 0; i < charArray.length; i++) {
             char s = charArray[i];
             if (!Character.isDigit(s)) {
                 res += s;
             } else {
                 int num = Integer.parseInt(String.valueOf(s));
-                for (int j = 0; j < num; j++) {
-                    res += charArray[1+i];
+                for (int j = 0; j < num - 1; j++) {
+                    res += charArray[1 + i];
                 }
             }
         }
