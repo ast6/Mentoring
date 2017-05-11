@@ -9,6 +9,8 @@ import static org.hamcrest.core.Is.is;
 public class TestDemo1 {
     Count count = new Count();
 
+
+
     @Test
     public void testDisc() {
 
