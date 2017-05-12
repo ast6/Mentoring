@@ -1,10 +1,19 @@
 import demo3.BinSearch;
 import demo3.Sorting;
 import org.junit.*;
+import org.junit.runner.RunWith;
+import org.junit.runners.Parameterized;
+
+import java.util.Arrays;
+import java.util.Collection;
+
+@RunWith(value = Parameterized.class)
 
 public class TestDemo3 {
 
     int[] arr;
+    int expected;
+    int value;
 
     @Before
     public void creatArray() {
@@ -19,13 +28,25 @@ public class TestDemo3 {
 
     }
 
+    @Parameterized.Parameters
+    public static Collection data() {
+        return Arrays.asList(new Object[][]{{1, 5}, {-1, 900}, {-2, 39}});
+    }
+
+    public TestDemo3(int expected, int value) {
+        this.expected = expected;
+        this.value = value;
+    }
+
     @Test
     public void testOfSearch() {
         BinSearch binSearch = new BinSearch();
 
+        Assert.assertEquals(expected, binSearch.binarySearch(arr, value));
+///                                        OR
         Assert.assertEquals(1, binSearch.binarySearch(arr, 5));
-        Assert.assertEquals(-1,binSearch.binarySearch(arr,900));
-        Assert.assertEquals(-2,binSearch.binarySearch(arr,39));
+        Assert.assertEquals(-1, binSearch.binarySearch(arr, 900));
+        Assert.assertEquals(-2, binSearch.binarySearch(arr, 39));
     }
 
     @After
