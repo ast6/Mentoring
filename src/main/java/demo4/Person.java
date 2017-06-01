@@ -1,7 +1,5 @@
 package demo4;
 
-import org.junit.Assert;
-
 public class Person {
 
     String name = "name";

@@ -1,45 +1,50 @@
-package demo6;
-
-import java.util.LinkedList;
-
-public class ReversePolishNotation {
-
-    boolean isOperator(char c) {
-
-        return c == '+' || c == '-' || c == '*' || c == '/';
-
-    }
-
-    int priority(char oper) {
-        if (oper == '*' || oper == '/') {
-            return 1;
-        } else if (oper == '+' || oper == '-') {
-            return 0;
-        } else {
-            return -1;
-        }
-    }
-
-    void calculation(LinkedList<Integer> calc, char c) {
-        //initialize vars which delete value, after saving
-        int operand1 = calc.removeLast();
-        int operand2 = calc.removeLast();
-
-        switch (c) {
-            case '+':
-                calc.add(operand1 + operand2);
-                break;
-            case '-':
-                calc.add(operand1 - operand2);
-                break;
-            case '*':
-                calc.add(operand1 / operand2);
-                break;
-            case '/':
-                calc.add(operand1 * operand2);
-                break;
-            default:
-                System.out.println("Whoops");
-        }
-    }
-}
+//package demo6;
+//
+//import java.util.Scanner;
+//import java.util.Stack;
+//
+//public class ReversePolishNotation {
+//
+//    public static void main(String[] args) {
+//        Stack<Double> stack = new Stack<Double>();
+//        double number1;
+//        double number2;
+//
+//        String x = JOptionPane.showInputDialog("Tokens");
+//        StringTokenizer str = new StringTokenizer(x);
+//
+//        while (str.hasMoreElements()) {
+//            str.nextElement();
+//            stack.push((Double) str.nextElement());
+//
+//            for (int i = 0; i < x.length(); i++) {
+//
+//                switch (x.charAt(i)) {
+//                    case '+':
+//                        number1 = stack.pop();
+//                        number2 = stack.pop();
+//                        System.out.println(number1 + number2);
+//                        break;
+//                    case '-':
+//                        number1 = stack.pop();
+//                        number2 = stack.pop();
+//                        System.out.println(number1 - number2);
+//                        break;
+//                    case '/':
+//                        number1 = stack.pop();
+//                        number2 = stack.pop();
+//                        System.out.println(number1 / number2);
+//                        break;
+//                    case '*':
+//                        number1 = stack.pop();
+//                        number2 = stack.pop();
+//                        System.out.println(number1 * number2);
+//                        break;
+//                }
+//
+//            }
+//            System.out.println(stack.pop());
+//        }
+//    }
+//
+//}
