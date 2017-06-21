@@ -1,5 +1,5 @@
-import demo3.BinSearch;
-import demo3.Sorting;
+import mentoring.demo3.BinSearch;
+import mentoring.demo3.Sorting;
 import org.junit.*;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;

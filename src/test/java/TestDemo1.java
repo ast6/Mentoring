@@ -1,4 +1,4 @@
-import demo1_2.Count;
+import mentoring.demo1_2.Count;
 import org.junit.Assert;
 import org.junit.Test;
 
