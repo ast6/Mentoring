@@ -1,6 +1,4 @@
-import org.openqa.selenium.WebDriver;
 import webDriver.LogInTest;
-
 
 public class DemoWebDriver {
 
@@ -9,7 +7,5 @@ public class DemoWebDriver {
         LogInTest logInTest = new LogInTest();
 
         logInTest.LoggingSteps();
-
-
     }
 }

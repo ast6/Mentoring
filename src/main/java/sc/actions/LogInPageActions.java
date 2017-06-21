@@ -4,10 +4,11 @@ import sc.pages.LogInPage;
 
 public class LogInPageActions {
 
-    LogInPage logInPage = new LogInPage();
-    public void clickSignInButton(){
+    private LogInPage logInPage = new LogInPage();
 
-        logInPage.getSignInButton().click();
+    public void clickScSignInButton() {
+
+        logInPage.getLogInButton().click();
 
     }
 

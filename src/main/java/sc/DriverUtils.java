@@ -7,15 +7,13 @@ public class DriverUtils {
 
     private static WebDriver driver;
 
-    public static WebDriver getFoxDriver(){
+    public static WebDriver getFoxDriver() {
 
-        if(driver == null){
-            String exePath = "C:/Users/Fed/IdeaProjects/Mentoring/geckodriver";
-            System.setProperty("webdriver.firefox.driver", exePath);
-        driver= new FirefoxDriver();
+        if (driver == null) {
+            String exePath = "drivers/geckodriver.exe";
+            System.setProperty("webdriver.gecko.driver", exePath);
+            driver = new FirefoxDriver();
         }
-            return driver;
-
+        return driver;
     }
-
 }
