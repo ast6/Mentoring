@@ -8,7 +8,7 @@ public class LogInPageActions {
 
     public void clickScSignInButton() {
 
-        logInPage.getLogInButton().click();
+        logInPage.getScSignInButton().click();
 
     }
 

@@ -1,7 +1,6 @@
 package sc.pages;
 //add locators
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -13,38 +12,39 @@ public class LogInPage {
 
     private WebDriver driver = getFoxDriver();
 
-   @FindBy(id = "steamAccountName")
-    private By steamAccountNameButtonBy;
-   @FindBy(id = "steamPassword")
-    private By steamAccountPasswordButtonBy;
-   @FindBy(id = "imageLogin")
-    private By steamSignInButtonBy;
-   @FindBy(className = "btn btn-signin")
-   private By scSignInButtonBy;
+    public LogInPage() {
+        PageFactory.initElements(driver, this);
+    }
 
-    public WebElement getLogInButton() {
-        PageFactory.initElements(driver, this.scSignInButtonBy);
-        return driver.findElement(scSignInButtonBy);
+   @FindBy(id = "steamAccountName")
+    private WebElement steamAccountNameButtonBy;
+   @FindBy(id = "steamPassword")
+    private WebElement steamAccountPasswordButtonBy;
+   @FindBy(id = "imageLogin")
+    private WebElement steamSignInButtonBy;
+   @FindBy(css = "button[class=\"btn btn-signin\"]")
+   private WebElement scSignInButtonBy;
+
+    public WebElement getScSignInButton() {
+             return scSignInButtonBy;
     }
     public WebElement getSteamSignInButton() {
-        PageFactory.initElements(driver, this.steamSignInButtonBy);
-        return driver.findElement(steamSignInButtonBy);
+        return steamSignInButtonBy;
     }
     public WebElement getSteamAccountPasswordButton() {
-        PageFactory.initElements(driver, this.steamAccountPasswordButtonBy);
-        return driver.findElement(steamAccountPasswordButtonBy);
+        return steamAccountPasswordButtonBy;
     }
     public WebElement getSteamAccountNameButton() {
-        PageFactory.initElements(driver, this.steamAccountNameButtonBy);
-        return driver.findElement(steamAccountNameButtonBy);
+        return steamAccountNameButtonBy;
     }
+
 
 //    public By steamAccountNameButtonBy = By.xpath("//*[@id='steamAccountName']");
 //    public By steamAccountPasswordButtonBy = By.xpath("//*[@id='steamPassword']");
 //    public By steamSignInButtonBy = By.xpath("//*[@id='imageLogin']");
 //    public By scSignInButtonBy = By.xpath("//*[@class='btn btn-signin']");
 //
-//    public WebElement getLogInButton() {
+//    public WebElement getScSignInButton() {
 //        return driver.findElement(scSignInButtonBy);
 //    }
 //    public WebElement getSteamSignInButton() {
