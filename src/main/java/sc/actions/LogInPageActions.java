@@ -1,15 +1,19 @@
 package sc.actions;
 
+import org.openqa.selenium.WebDriver;
+
 import sc.pages.LogInPage;
+
+import static sc.DriverUtils.getFoxDriver;
 
 public class LogInPageActions {
 
-    private LogInPage logInPage = new LogInPage();
+    private WebDriver driver = getFoxDriver();
+
+    private LogInPage logInPage = new LogInPage(this.driver);
 
     public void clickScSignInButton() {
-
-        logInPage.getScSignInButton().click();
-
+        logInPage.getLogInButton().click();
     }
 
 }

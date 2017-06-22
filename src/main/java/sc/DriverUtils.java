@@ -10,7 +10,6 @@ public class DriverUtils {
     private static WebDriver driver;
 
     public static WebDriver getFoxDriver() {
-
         if (driver == null) {
             String exePath = "drivers/geckodriver.exe";
             System.setProperty("webdriver.gecko.driver", exePath);
