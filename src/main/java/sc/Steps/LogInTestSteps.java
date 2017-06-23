@@ -1,25 +1,27 @@
-package webDriver;
+package sc.Steps;
 
 import java.util.concurrent.TimeUnit;
 
+import org.jbehave.core.annotations.Given;
 import org.openqa.selenium.WebDriver;
 
 import sc.actions.LogInPageActions;
-import sc.pages.LogInPage;
+import sc.pages.LoginPage;
 
 import static sc.DriverUtils.getFoxDriver;
 
-public class LogInTest {
+public class LogInTestSteps{
 
-    LogInPageActions logInPageActions = new LogInPageActions();
+    private LogInPageActions logInPageActions = new LogInPageActions();
     private WebDriver driver = getFoxDriver();
-    LogInPage logInPage = new LogInPage(driver);
+    private LoginPage loginPage = new LoginPage(driver);
 
-    public void LoggingSteps() throws Throwable {
-
+    @Given("a stock of <name> and a <password>")
+    public void loggingSteps() throws Throwable{
         driver.get("https://skins.cash");
         driver.manage().timeouts().pageLoadTimeout(5000, TimeUnit.MILLISECONDS);
         driver.manage().timeouts().implicitlyWait(5000, TimeUnit.MILLISECONDS);
+        String winHandleBefore = driver.getWindowHandle();
 
         logInPageActions.clickScSignInButton();
 
@@ -30,12 +32,14 @@ public class LogInTest {
         }
 
         // Put this to the Action class
-        logInPage.getSteamAccountNameButton().sendKeys("shumisteam001");
-        logInPage.getSteamAccountPasswordButton().sendKeys("8GLtSBfhYzICQENO");
-        logInPage.getSteamSignInButton().click();
+        loginPage.getSteamAccountNameField().sendKeys("shumisteam001");
+        loginPage.getSteamAccountPasswordField().sendKeys("8GLtSBfhYzICQENO");
+        loginPage.getSteamSignInButton().click();
 
-        Thread.sleep(70000);
-        driver.quit();
+        Thread.sleep(40000);
+
+        driver.switchTo().window(winHandleBefore);
+//        driver.quit();
     }
 
 }

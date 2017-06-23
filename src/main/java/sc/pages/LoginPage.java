@@ -4,21 +4,20 @@ package sc.pages;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
 
-
-public class LogInPage extends BasePage {
+public class LoginPage extends scPage {
 
     @FindBy(id = "steamAccountName")
-    private WebElement steamAccountNameButtonBy;
+    private WebElement steamAccountNameFieldBy;
     @FindBy(id = "steamPassword")
-    private WebElement steamAccountPasswordButtonBy;
+    private WebElement steamAccountPasswordFieldBy;
     @FindBy(id = "imageLogin")
     private WebElement steamSignInButtonBy;
     @FindBy(css = "button[class=\"btn btn-signin\"]")
     private WebElement scSignInButtonBy;
 
-    public LogInPage(WebDriver driver) {
+
+    public LoginPage(WebDriver driver) {
         super(driver);
     }
 
@@ -28,15 +27,15 @@ public class LogInPage extends BasePage {
     public WebElement getSteamSignInButton() {
         return steamSignInButtonBy;
     }
-    public WebElement getSteamAccountPasswordButton() {
-        return steamAccountPasswordButtonBy;
+    public WebElement getSteamAccountPasswordField() {
+        return steamAccountPasswordFieldBy;
     }
-    public WebElement getSteamAccountNameButton() {
-        return steamAccountNameButtonBy;
+    public WebElement getSteamAccountNameField() {
+        return steamAccountNameFieldBy;
     }
 
-    // public By steamAccountNameButtonBy = By.xpath("//*[@id='steamAccountName']");
-    // public By steamAccountPasswordButtonBy = By.xpath("//*[@id='steamPassword']");
+    // public By steamAccountNameFieldBy = By.xpath("//*[@id='steamAccountName']");
+    // public By steamAccountPasswordFieldBy = By.xpath("//*[@id='steamPassword']");
     // public By steamSignInButtonBy = By.xpath("//*[@id='imageLogin']");
     // public By scSignInButtonBy = By.xpath("//*[@class='btn btn-signin']");
     //
@@ -46,11 +45,11 @@ public class LogInPage extends BasePage {
     // public WebElement getSteamSignInButton() {
     // return driver.findElement(steamSignInButtonBy);
     // }
-    // public WebElement getSteamAccountPasswordButton() {
-    // return driver.findElement(steamAccountPasswordButtonBy);
+    // public WebElement getSteamAccountPasswordField() {
+    // return driver.findElement(steamAccountPasswordFieldBy);
     // }
-    // public WebElement getSteamAccountNameButton() {
-    // return driver.findElement(steamAccountNameButtonBy);
+    // public WebElement getSteamAccountNameField() {
+    // return driver.findElement(steamAccountNameFieldBy);
     // }
 }
 
